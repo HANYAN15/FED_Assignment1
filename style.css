@@ -1,0 +1,818 @@
+@import url('"https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&family=Roboto:wght@100&family=Sometype+Mono&display=swap"');
+
+
+/* DEFAULT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost' , sans-serif;
+}
+
+/* Different text for me to use later */
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+
+/* Some padding and margin for me to add on later */
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin:40px 0;
+}
+
+/* Different types of Button*/
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+
+body{
+    width: 100%;
+}
+
+/*HEADER*/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Align my navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove the bullet points and add padding to nav bar*/
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Remove underline from text in navbar and bold them*/
+#navbar li a{
+    text-decoration: none; /*remove underline*/
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease; /*transition slower*/
+}
+
+/* Add color when user hovers on the nav bar and change color based on what page user is on*/
+#navbar li a:hover,
+#navbar li a.nav-location{/* location of user */
+    color: #465b52;
+}
+
+
+/* Add underline to location of user and when hover*/
+#navbar li a.nav-location::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #465b52;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+/* MAIN PAGE*/
+/* Put background image of Main page and adjust words on Main page */
+#Main-words{
+    background-image: url("Images/Shoe-Main-Page.jpg");
+    height: 115vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* Add some padding to my words in Main page*/
+#Main-words h4{
+    padding-bottom: 15px;
+}
+
+/* Add color to my h1 text */
+#Main-words h1{
+    color: #465b52;
+}
+
+/*Decorate my button*/
+#Main-words button{
+    display: inline-block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;
+}
+
+/*Hover effect on button*/
+#Main-words button:hover{
+    background-color: #000;
+    color:#fff;
+}
+
+/*FEATURES */
+/* Allign my features horizontally and add some spacing between*/
+#feature{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*Creating my border and shadow for my feature box*/
+#feature .feature-box{
+    width: 180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+/*Add more shadow when user hovers over*/
+#feature .feature-box:hover{
+    box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}
+
+/*Creating colored box for the text on my feature box*/
+#feature .feature-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+/* change the colored box colors for the rest*/
+#feature .feature-box:nth-child(2) h6{
+    background-color:#cdebbc;
+}
+
+#feature .feature-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+
+#feature .feature-box:nth-child(4) h6{
+    background-color:#cdd4f8;
+}
+
+#feature .feature-box:nth-child(5) h6{
+    background-color:#f6dbf6;
+}
+#feature .feature-box:nth-child(6) h6{
+    background-color:#fff2e5;
+}
+
+/* Allign my New Arrivals text to the center*/
+#product-page{
+    text-align: center;
+}
+
+
+/*Creating a box for my product image*/
+#product-page .product{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px  0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+/* Add some shadow when user hovers*/
+#product-page .product:hover{ 
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+/* Adjust my product image and curve my borders*/
+#product-page .product img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Align the text in my item box*/
+#product-page .product .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+/* Change some text sizing and color*/
+#product-page .product .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+/* Style h5 tag text*/
+#product-page .product .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+/* Style my stars */
+#product-page .product .des i{
+    font-size: 12px;
+    color: rgb(243,181,25);
+}
+
+/* Style my price tag*/
+#product-page .product .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+
+/* Style my shopping cart*/
+#product-page .product .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+/* Adjust my Product box */
+#product-page .product-box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+/*Banner*/
+/* Align banner text to the center and add background image*/
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("Images/banner-image.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style my h4 text*/
+#banner h4{
+    color: #fff;
+    font-size: 16px;
+
+}
+
+/* Style my h2 text*/
+#banner h2{
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+/* Style my h2 span tag(50%off)*/
+#banner h2 span{
+    color: red;
+}
+
+
+/* hover effect for banner button*/
+#banner button:hover{
+    background:#f5f5dc;
+    color: #000;
+}
+
+
+/*FOOTER*/
+/* Adjust text in footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Allign my text in 1 column*/
+footer .column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/*Style my h4 text*/
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+/*Style my p text*/
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+/*Remove underline from text*/
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/*Add some margin*/
+footer .follow{
+    margin-top: 20px;
+}
+
+/*Style my icons*/
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+/*Add border to my app store and google play*/
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+/* Some margin to my images (VISA, MASTER)*/
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+/* Change color when hover on text and icon*/
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+
+/* Align my copyright text*/
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+/* Shop Page */
+/* Adjust the text of page header*/
+#page-header{
+    background-image: url("Images/banner2.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+/* Change Color of page header text*/
+#page-header h2,
+#page-header p{
+    color: #fff;
+}
+
+/*Align page number*/
+#page-number{
+    text-align: center;
+}
+
+/*Style page number*/
+#page-number a{
+    text-decoration: none;
+    background-color: #222;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/*Style Arrow icon*/
+#page-number a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Product Details */
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+/*Adjust image*/
+#prodetails .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+}
+
+/*Adjust other image to be small*/
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+    width:auto;
+    height:auto;
+}
+
+/*Add some spacing between the small images*/
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/* Adjust text*/
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+/*Adjust h4 text*/
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+
+/* Adjust h2 text*/
+#prodetails .single-pro-details h2{
+    font-size: 26px;
+}
+
+/* Style select size*/
+#prodetails .single-pro-details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+/* Style input quantity of shoes*/
+#prodetails .single-pro-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/*Style button*/
+#prodetails .single-pro-details button{
+    background: #222;
+    color: #fff;
+}
+
+/* Cart Page */
+
+/*Adjust Table*/
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+/*Adjust img in cart*/
+#cart table img{
+    width: 70px;
+}
+
+/*Adjust width of each column*/
+#cart table td:nth-child(1){
+    width:100px;
+    text-align:center;
+}
+
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+
+/* Adjust input quantity box*/
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+/*Add border to table head*/
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+/*Adjust and style table data*/
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+/*Add some padding*/
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+
+/*Change text size*/
+#cart table tbody td{
+    font-size: 13px;
+}
+
+/* Adjust content of coupon and cart total*/
+#cart-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Add custom width*/
+#coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+/*Add some padding to h3 tag*/
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+}
+
+/*Style apply coupon input box*/
+#coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+
+/* Style Coupon and Proceed to checkout button*/
+#coupon button,
+#subtotal button{
+    background-color: #088178;
+    color:#fff;
+    padding: 12px 20px;
+}
+
+/*Add borders around subtotals*/
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+/*Style subtotal table*/
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*Style subtotal table text*/
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/*Sliding effect for smaller devices*/
+#cart{
+    overflow-x: auto;
+}
+
+/* Display none when in PC view */
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+/* Display none when in PC view */
+#close{
+    display: none;
+}
+
+/*Mobile Devices*/
+@media (max-width: 799px){
+    /*Custom padding*/
+    .section-p1{
+        padding: 40px 20px;
+    }
+
+    /*Mobile Navigation Bar*/
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;/*Make my nav bar hidden*/
+        height: 100vh;
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.01);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;/*sliding effect*/
+    }
+
+    /* navbar will appear when active*/
+    #navbar.active{
+        right: 0px;
+    }
+
+    /* Add some margin to my nav bar */
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    /* Display when in mobile View*/
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    /* Adjust mobile Icons*/
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    /* Adjust and style my close button*/
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    /* Remove shopping bag from mobile nav bar*/
+    #lg-bag{
+        display: none;
+    }
+
+    /* Adjust text in Main page*/
+    #Main-words{
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    /* Adjust features in mobile view*/
+    #feature{
+        justify-content: center;
+    }
+
+    /* Add some margin to the feature-box*/
+    #feature .feature-box{
+        margin: 15px 15px;
+    }
+
+    /*Adjust product boxes*/
+    #product-page .product-box{
+        justify-content: center;
+    }
+
+    /*Add some margin*/
+    #product-page .product{
+        margin: 15px;
+    }
+}
+
+/*Same for smaller screens mobile devices*/
+@media (max-width: 576px){
+    .section-p1{
+        padding: 20px;
+    }
+    
+    #header{
+        padding: 10px 30px;
+    }
+
+    h1{
+        font-size: 38px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+
+
+    #Main-words{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    #feature{
+        justify-content: space-between;
+    }
+
+    #feature .feature-box{
+        width: 190px;
+        margin: 0 0 15px 0;
+    }
+
+    #product-page .product{
+        width: 100%;
+    }
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+    }
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+    #prodetails .single-pro-details {
+        width: 100%;
+    }
+
+
+}
